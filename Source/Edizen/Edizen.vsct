@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidEdizenPkg">
+    <Groups>
+      <Group guid="guidEdizenCmdSet" id="MyEdizenMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_EDIT"/>
+      </Group>
+    </Groups>
+    <Buttons>
+      <Button guid="guidEdizenCmdSet" id="cmdidEnableEdizen" priority="0x0100" type="Button" >
+        <Parent guid="guidEdizenCmdSet" id="MyEdizenMenuGroup"/>
+        <Strings>
+          <ButtonText>Enable Edizen Autosync</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidEdizenCmdSet" id="cmdidSyncEdizen" priority="0x0101" type="Button">
+        <Parent guid="guidEdizenCmdSet" id="MyEdizenMenuGroup" />
+        <Strings>
+          <ButtonText>Sync Edizen Now</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+  
+  <KeyBindings>
+    <KeyBinding guid="guidEdizenCmdSet" id="cmdidEnableEdizen" editor="guidVSStd97" key1="VK_F11" mod1="Control Shift" />
+    <!--<KeyBinding guid="guidEdizenCmdSet" id="cmdidSyncEdizen" editor="guidVSStd97" />-->
+  </KeyBindings>
+  
+  <Symbols>
+    <GuidSymbol name="guidEdizenPkg" value="{58104dc7-f5ca-4b5d-9776-a8a031e2bd94}" />
+    <GuidSymbol name="guidEdizenCmdSet" value="{f8e4a754-abfe-4977-a5ab-a6468adf15c0}">
+      <IDSymbol name="MyEdizenMenuGroup" value="0x1020" />
+      <IDSymbol name="EdizenMainMenu" value="0x2020"/>
+      <IDSymbol name="cmdidEnableEdizen" value="0x0100" />
+      <IDSymbol name="cmdidSyncEdizen" value="0x0101" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

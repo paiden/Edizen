@@ -1,0 +1,22 @@
+﻿1.2.3 [2014-11-14]:
+~) Error message box can be disabled and is disabled by default.
+
+1.2.2 [2014-11-08]:
+%) Fixed unhandled exception caused by configuring 'Edizen' after closing text editor windows.
+
+1.2.1 [2014-11-01]:
+%) Text editor won't jump around when selecting items from intellisense.
+
+1.2.0 [2014-10-26]:
++) Introduced the 'Bottom Split Fraction' so that a view port segment can be specified. Auto scrolling will only 
+be done when the cursor moves outside of that segment. E.g. to have a top and bottom margin of 25% of the editor 
+view height you need to set 'Split Fraction' to 0.25 and 'Bottom Split Fraction' to 0.75. Setting the 'Bottom
+Split Fraction' to a negative value well keep the cursor exactly at the 'Split Fraction' position (old behavior).
+%) Fixed an issue that caused disable auto sync to not work correctly, when text was selected in the editor.
+
+1.1.0 [2014-10-18]:
++) AutoSync will be temporarily disabled while mouse buttons are pressed to stop the editor from moving around 
+when clicking or selecting text. 
+
+1.0.0:
+Initial Release
