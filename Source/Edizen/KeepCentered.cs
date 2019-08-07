@@ -59,7 +59,7 @@ namespace privatedeveloperinc.Edizen
             }
             catch (Exception exc)
             {
-                if (EdizenPackage.Config.ShowErrorMessageBox)
+                if (EdizenPackage.Config?.ShowErrorMessageBox ?? false)
                 {
                     MessageBox.Show(Application.Current.MainWindow, exc.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
@@ -113,8 +113,8 @@ namespace privatedeveloperinc.Edizen
         }
 
         /// <summary>
-        /// When text is selected in the text editor, the caret changed event is fired after the mouse up event -> mouse is not classified 
-        /// as pressed anymore. So we hook the global preview mouse events and log the last up event, so we can disable the 
+        /// When text is selected in the text editor, the caret changed event is fired after the mouse up event -> mouse is not classified
+        /// as pressed anymore. So we hook the global preview mouse events and log the last up event, so we can disable the
         /// mouse for a small time duration event after the up phase.
         /// </summary>
         /// <returns></returns>
